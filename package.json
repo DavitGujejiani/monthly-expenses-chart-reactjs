@@ -39,6 +39,7 @@
     "prettier": "2.3.2"
   },
   "prettier": {
-    "singleQuote": true
+    "singleQuote": true,
+    "tabWidth": 4
   }
 }
