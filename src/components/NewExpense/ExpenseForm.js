@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import './ExpenseForm.css';
 
-function ExpenseForm() {
+function ExpenseForm(props) {
     // const [userInput, setUserInput] = useState({
     //     enteredTitle: '',
     //     enteredNumber: '',
@@ -10,7 +10,7 @@ function ExpenseForm() {
     // });
 
     const [enteredTitle, setEnteredTitle] = useState('');
-    const [enteredNumber, setEnteredNumber] = useState('');
+    const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
 
     function titleChangeHandler(event) {
@@ -20,20 +20,38 @@ function ExpenseForm() {
         // });
     }
 
-    function numberChangeHandler(event) {
-        setEnteredNumber(event.target.value);
+    function amountChangeHandler(event) {
+        setEnteredAmount(event.target.value);
     }
 
     function dateChangeHandler(event) {
         setEnteredDate(event.target.value);
     }
 
+    function submitHandler(event) {
+        event.preventDefault();
+
+        const expenseData = {
+            title: enteredTitle,
+            amount: enteredAmount,
+            date: new Date(enteredDate),
+        };
+        props.onSaveExpenseData(expenseData);
+        setEnteredTitle('');
+        setEnteredAmount('');
+        setEnteredDate('');
+    }
+
     return (
-        <form>
+        <form onSubmit={submitHandler}>
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label htmlFor="title">Title</label>
-                    <input type="text" onChange={titleChangeHandler} />
+                    <input
+                        type="text"
+                        value={enteredTitle}
+                        onChange={titleChangeHandler}
+                    />
                 </div>
                 <div className="new-expense__control">
                     <label htmlFor="amount">Amount</label>
@@ -41,7 +59,8 @@ function ExpenseForm() {
                         type="number"
                         min="0.01"
                         step="0.01"
-                        onChange={numberChangeHandler}
+                        value={enteredAmount}
+                        onChange={amountChangeHandler}
                     />
                 </div>
                 <div className="new-expense__control">
@@ -50,6 +69,7 @@ function ExpenseForm() {
                         type="date"
                         min="2019-01-01"
                         max="2022-12-31"
+                        value={enteredDate}
                         onChange={dateChangeHandler}
                     />
                 </div>
