@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/monthly-expenses-chart-reactjs/static/css/main.333d18e5.chunk.css",
+    "main.js": "/monthly-expenses-chart-reactjs/static/js/main.7bdfce45.chunk.js",
+    "main.js.map": "/monthly-expenses-chart-reactjs/static/js/main.7bdfce45.chunk.js.map",
+    "runtime-main.js": "/monthly-expenses-chart-reactjs/static/js/runtime-main.8849a8aa.js",
+    "runtime-main.js.map": "/monthly-expenses-chart-reactjs/static/js/runtime-main.8849a8aa.js.map",
+    "static/js/2.35c5b5b1.chunk.js": "/monthly-expenses-chart-reactjs/static/js/2.35c5b5b1.chunk.js",
+    "static/js/2.35c5b5b1.chunk.js.map": "/monthly-expenses-chart-reactjs/static/js/2.35c5b5b1.chunk.js.map",
+    "index.html": "/monthly-expenses-chart-reactjs/index.html",
+    "static/css/main.333d18e5.chunk.css.map": "/monthly-expenses-chart-reactjs/static/css/main.333d18e5.chunk.css.map",
+    "static/js/2.35c5b5b1.chunk.js.LICENSE.txt": "/monthly-expenses-chart-reactjs/static/js/2.35c5b5b1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8849a8aa.js",
+    "static/js/2.35c5b5b1.chunk.js",
+    "static/css/main.333d18e5.chunk.css",
+    "static/js/main.7bdfce45.chunk.js"
+  ]
+}
